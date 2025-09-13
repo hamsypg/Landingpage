@@ -36,7 +36,7 @@
         }
         .cta-button {
             display: inline-block;
-            background-color: #25D366; /* لون WhatsApp */
+            background-color: #25D366;
             color: white;
             font-size: 18px;
             padding: 15px 25px;
@@ -47,24 +47,13 @@
         .cta-button:hover {
             background-color: #1ebe57;
         }
-        video {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>فرصة عمل حقيقية مع شركة فارماسي التركية</h1>
 
-        <!-- الفيديو الإعلاني -->
-        <video controls autoplay muted>
-            <source src="video.mp4" type="video/mp4">
-            متصفحك لا يدعم عرض الفيديو.
-        </video>
-
-        <p>اكتشفي فرصة عمل مميزة، تواصلي معنا مباشرة على واتساب للحصول على المزيد من المعلومات</p>
+        <p>اكتشف فرصة عمل مميزة، تواصل معنا مباشرة على واتساب للحصول على التفاصيل.</p>
 
         <!-- عد تنازلي -->
         <p id="countdown" style="font-size:18px; font-weight:bold; color:#222;">
@@ -72,28 +61,24 @@
         </p>
 
         <!-- زر الانضمام -->
-        <a id="whatsapp-button" class="cta-button" href="#" target="_blank">انضم الآن</a>
+        <a id="whatsapp-button" class="cta-button" href="#">انضم الآن</a>
     </div>
 
     <script>
-        // ضع الرابط هنا سواء كان رقم WhatsApp أو رابط مجموعة
-        const link = "https://chat.whatsapp.com/LQCIgTx4EwgFUWvaA0rVwL"; // الرابط
-        // const link = "https://chat.whatsapp.com/IHJvwgw1qziEYXQf8k3X9d"; // مثال لمجموعة
-        // const link = "https://wa.me/212xxxxxxxxx"; // مثال لرقم
-        // تحليل تلقائي: إذا الرابط فيه wa.me → رقم، إذا فيه chat.whatsapp.com → مجموعة
-        let finalLink = link;
-        if(link.includes("wa.me")){
-            // رقم WhatsApp
-            finalLink = link;
-        } else if(link.includes("chat.whatsapp.com")){
-            // رابط مجموعة
-            finalLink = link;
-        }
+        const finalLink = "https://chat.whatsapp.com/LQCIgTx4EwgFUWvaA0rVwL"; //link
 
-        document.getElementById("whatsapp-button").href = finalLink;
+        const button = document.getElementById("whatsapp-button");
+        let clicked = false;
 
-        // عد تنازلي 10 ثواني + تحويل تلقائي
-        let timeLeft = 10; // ثواني
+        button.addEventListener("click", function(e){
+            e.preventDefault();
+            if(!clicked){
+                clicked = true;
+                window.location.href = finalLink;
+            }
+        });
+
+        let timeLeft = 10;
         const timerElement = document.getElementById("timer");
 
         const countdown = setInterval(() => {
@@ -102,14 +87,12 @@
 
             if(timeLeft <= 0){
                 clearInterval(countdown);
-                window.location.href = finalLink; // التوجيه التلقائي
+                if(!clicked){
+                    clicked = true;
+                    window.location.href = finalLink;
+                }
             }
         }, 1000);
     </script>
 </body>
 </html>
-
-
-
-
-
