@@ -1,17 +1,91 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>إنضم الأن لمحموعتنا</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرصة عمل فارماسي التركية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+        h1 {
+            color: #222;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #25D366; /* لون WhatsApp */
+            color: white;
+            font-size: 18px;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #1ebe57;
+        }
+        video {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
-<body style="text-align:center; padding:50px; font-family:Arial; background:#f9f9f9;">
-  <h2>لا تضيع فرصة للإنضمام إلينا الأن 👋</h2>
-  <p>اضغط على الزر للانضمام إلى مجموعتنا على واتساب</p>
-  <a href="https://chat.whatsapp.com/LQCIgTx4EwgFUWvaA0rVwL?mode=ems_wa_t" target="_blank" 
-     style="display:inline-block; background:#25D366; color:#fff; padding:15px 25px; 
-            text-decoration:none; border-radius:8px; font-size:18px;">
-    انضم الآن
-  </a>
+<body>
+    <div class="container">
+        <h1>فرصة عمل حقيقية مع شركة فارماسي التركية</h1>
+
+        <!-- الفيديو الإعلاني -->
+        <video controls autoplay muted>
+            <source src="video.mp4" type="video/mp4">
+            متصفحك لا يدعم عرض الفيديو.
+        </video>
+
+        <p>اكتشف فرصة عمل مميزة، تواصل معنا مباشرة على WhatsApp للحصول على التفاصيل.</p>
+
+        <!-- زر الانضمام -->
+        <a id="whatsapp-button" class="cta-button" href="#" target="_blank">انضم الآن</a>
+    </div>
+
+    <script>
+        // ضع الرابط هنا سواء كان رقم WhatsApp أو رابط مجموعة
+        const link = "https://wa.me/XXXXXXXXXXX"; // مثال لرقم
+        // const link = "https://chat.whatsapp.com/XXXXXXXXXXXXXX"; // مثال لمجموعة
+
+        // تحليل تلقائي: إذا الرابط فيه wa.me → رقم، إذا فيه chat.whatsapp.com → مجموعة
+        let finalLink = link;
+        if(link.includes("wa.me")){
+            // رقم WhatsApp
+            finalLink = link;
+        } else if(link.includes("chat.whatsapp.com")){
+            // رابط مجموعة
+            finalLink = link;
+        }
+
+        document.getElementById("whatsapp-button").href = finalLink;
+    </script>
 </body>
 </html>
-
