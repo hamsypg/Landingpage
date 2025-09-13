@@ -66,6 +66,11 @@
 
         <p>اكتشف فرصة عمل مميزة، تواصل معنا مباشرة على واتساب للحصول على التفاصيل.</p>
 
+        <!-- عد تنازلي -->
+        <p id="countdown" style="font-size:18px; font-weight:bold; color:#222;">
+          سيتم توجيهكم تلقائياً خلال <span id="timer">10</span> ثواني
+        </p>
+
         <!-- زر الانضمام -->
         <a id="whatsapp-button" class="cta-button" href="#" target="_blank">انضم الآن</a>
     </div>
@@ -86,7 +91,20 @@
         }
 
         document.getElementById("whatsapp-button").href = finalLink;
+
+        // عد تنازلي 10 ثواني + تحويل تلقائي
+        let timeLeft = 10; // ثواني
+        const timerElement = document.getElementById("timer");
+
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+
+            if(timeLeft <= 0){
+                clearInterval(countdown);
+                window.location.href = finalLink; // التوجيه التلقائي
+            }
+        }, 1000);
     </script>
 </body>
 </html>
-
