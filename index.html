@@ -1,98 +1,96 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فرصة عمل فارماسي التركية</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 500px;
-            width: 90%;
-        }
-        h1 {
-            color: #222;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        p {
-            color: #555;
-            font-size: 16px;
-            margin-bottom: 25px;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #25D366;
-            color: white;
-            font-size: 18px;
-            padding: 15px 25px;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #1ebe57;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فرصتك الذهبية للتسويق الشبكي</title>
+  <style>
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #ffd700;
+    }
+    header p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    section {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+    }
+    section h2 {
+      color: #ffd700;
+      margin-bottom: 15px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #fff;
+      background: #28a745;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #218838;
+      transform: scale(1.05);
+    }
+    footer {
+      margin: 30px 0;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>فرصة عمل حقيقية مع شركة فارماسي التركية</h1>
+  <header>
+    <h1>فرصتك الذهبية للتسويق الشبكي 🌟</h1>
+    <p>
+      إذا وصلت لهنا، راه عندك طموح ورغبة تغير حياتك.<br>
+      هادي إشارتك باش تبدأ طريق النجاح فمجال التسويق الشبكي.
+    </p>
+  </header>
 
-        <p>اكتشف فرصة عمل مميزة، تواصل معنا مباشرة على واتساب للحصول على التفاصيل.</p>
+  <section>
+    <h2>علاش تنضم لينا؟</h2>
+    <p>
+      ✨ غادي تتعلم أسرار التسويق الشبكي مع فريق محترف.<br>
+      💼 فرصة تبني دخل إضافي ومستقبل أفضل.<br>
+      🚀 دعم كامل وخطوات واضحة باش توصل لهدفك.
+    </p>
 
-        <!-- عد تنازلي -->
-        <p id="countdown" style="font-size:18px; font-weight:bold; color:#222;">
-          سيتم توجيهكم تلقائياً خلال <span id="timer">10</span> ثواني
-        </p>
+    <h2>واش مستعد تبدأ؟</h2>
+    <p>
+      القرار بين يديك 🙌.  
+      ما غاديش نحولك مباشرة بلا اختيار،  
+      انت اللي خاصك تاخد الخطوة وتنضم لينا بحرية ديالك.
+    </p>
 
-        <!-- زر الانضمام -->
-        <a id="whatsapp-button" class="cta-button" href="#">انضم الآن</a>
-    </div>
+    <a class="btn" href="https://chat.whatsapp.com/LQCIgTx4EwgFUWvaA0rVwL" target="_blank">
+      ✅ انضم الآن عبر واتساب
+    </a>
+  </section>
 
-    <script>
-        const finalLink = "https://chat.whatsapp.com/LQCIgTx4EwgFUWvaA0rVwL"; //link
-
-        const button = document.getElementById("whatsapp-button");
-        let clicked = false;
-
-        button.addEventListener("click", function(e){
-            e.preventDefault();
-            if(!clicked){
-                clicked = true;
-                window.location.href = finalLink;
-            }
-        });
-
-        let timeLeft = 10;
-        const timerElement = document.getElementById("timer");
-
-        const countdown = setInterval(() => {
-            timeLeft--;
-            timerElement.textContent = timeLeft;
-
-            if(timeLeft <= 0){
-                clearInterval(countdown);
-                if(!clicked){
-                    clicked = true;
-                    window.location.href = finalLink;
-                }
-            }
-        }, 1000);
-    </script>
+  <footer>
+    <p>© 2025 جميع الحقوق محفوظة | فريق التسويق الشبكي</p>
+  </footer>
 </body>
 </html>
